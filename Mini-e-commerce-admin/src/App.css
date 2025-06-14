@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(216, 204, 228);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+}
