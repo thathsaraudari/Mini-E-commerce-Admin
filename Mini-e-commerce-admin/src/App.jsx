@@ -1,13 +1,18 @@
-import elleLogo from './assets/logo.png'
 import './App.css'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
     <>
       <div>
         <nav>
-          <img src={elleLogo} alt="logo" />
-          <h2>ELLE</h2>
+          <Navbar/>
+          <br />
+          <Sidebar/>
+
+          <Footer/>
         </nav>
       </div>
 
