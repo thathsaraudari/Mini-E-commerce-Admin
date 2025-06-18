@@ -1,5 +1,5 @@
 function Footer() {
-    return <h3 className="footer">You can find the repository here: {"https://github.com/thathsaraudari/Mini-E-commerce-Admin.git</h3>"}</h3>
+    return <h3 className="footer">This is a footer with cool information</h3>
 }
 
 export default Footer;
