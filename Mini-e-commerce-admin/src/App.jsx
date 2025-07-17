@@ -1,27 +1,44 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-import ProductList from './components/ProductList';
+
 import productsData from './data/products.json'; 
+
+import AboutPage from './pages/AboutPage';
+import DashboardPage from './pages/DashboardPage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
+import NotFoundPage from './pages/NotFoundPage';
+
+
 
 function App() {
   const [products, setProducts] = useState(productsData);
+
+  console.log("productsData:", productsData);
 
   const handleDelete = (id) => {
     setProducts(products.filter(product => product.id !== id));
   };
 
   return (
-    <div>
-      <Navbar />
-      <Sidebar />
-      <main>
-        <h1>Product Admin</h1>
-        <ProductList products={products} onDelete={handleDelete} />
-      </main>
-      <Footer />
+    <div>      
+        <Navbar />
+        <Sidebar />
+
+
+          <Routes>
+            <Route path="/about" element={<AboutPage/>}/>         
+            <Route path="/" element={<DashboardPage products={products} onDelete={handleDelete}/>}/>
+            <Route path="/product/:productId" element={<ProductDetailsPage products={products}/>}/>
+            <Route path="/*" element={<NotFoundPage/>}/>
+          </Routes>          
+
+
+        <Footer />    
     </div>
   );
 }

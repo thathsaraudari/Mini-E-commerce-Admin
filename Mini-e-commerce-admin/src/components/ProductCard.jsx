@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ProductCard({ product, onDelete }) {
   return (
     <div style={{
@@ -5,7 +7,8 @@ function ProductCard({ product, onDelete }) {
       border: "1px solid #ccc",
       borderRadius: "10px",
       padding: "15px",
-      boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      color: "gray"
     }}>
       <img
         src={product.thumbnail}
@@ -22,8 +25,9 @@ function ProductCard({ product, onDelete }) {
         {product.stock > 10 ? "✅ In Stock" : "⚠️ Low Stock"}
       </p>
 
-      
-      <button onClick={() => onDelete(product.id)} style={{ marginTop: "10px" }}>
+      <Link to={`/product/${product.id}`}>Details</Link>
+
+      <button onClick={() => onDelete(product.id)} style={{ marginTop: "10px", backgroundColor: "grey" }}>
         Delete
       </button>
     </div>
