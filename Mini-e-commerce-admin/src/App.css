@@ -48,9 +48,8 @@ a {
 
 .sidebar {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .sidebar button {
@@ -78,15 +77,29 @@ h1 {
   align-items: center;
   height: 50px;
   gap: 10px;
-  margin-left: 1300px;
+  margin-left: 1100px;
+  margin-top: 30px;
 }
 .product-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background-color: white;
+  background-color: rgb(244, 234, 241);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   color: gray;
+}
+
+.add-btn {
+  font-size: 14px;
+  background-color: rgb(181, 35, 181);
+  color:azure;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-btn:hover {
+  background-color: #45a049;
 }

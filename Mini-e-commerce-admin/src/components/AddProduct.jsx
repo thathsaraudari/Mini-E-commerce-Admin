@@ -13,6 +13,13 @@ const AddProduct = () => {
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          style={{
+            backgroundColor: "white",
+            border: "2px solid #ccc",
+            padding: "4px",
+            fontSize: "10px",
+            color: "black"
+          }}
           />
 
         <label><strong>Description:</strong></label>
@@ -21,9 +28,16 @@ const AddProduct = () => {
           name="descrition"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          style={{
+            backgroundColor: "white",
+            border: "2px solid #ccc",
+            padding: "4px",
+            fontSize: "10px",
+            color: "black"
+          }}
         />
 
-        <button type="submit">Add Product</button>       
+        <button type="submit" className='add-btn'><strong>Add Product</strong></button>       
       </form>
     </div>
   )
