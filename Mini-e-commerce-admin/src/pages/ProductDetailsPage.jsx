@@ -16,7 +16,7 @@ function ProductDetailsPage({ products }) {
       color: "gray",
       alignContent: "center"}}>
         
-      <img src={product.thumbnail} alt={product.title} />
+      <img src={product.thumbnail} alt={product.thumbnail} />
       <h3>{product.title}</h3>
       <p>{product.description}</p>
       <p><strong>${product.price}</strong></p>

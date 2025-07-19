@@ -126,4 +126,8 @@ function UpdateProduct ( {products, onUpdateProduct}) {
 
 }
 
+<<<<<<< HEAD
 export default UpdateProduct;
+=======
+export default UpdateProduct;
+>>>>>>> 9d93cefdf92893214b9232f3c3da3bc1ec939090
