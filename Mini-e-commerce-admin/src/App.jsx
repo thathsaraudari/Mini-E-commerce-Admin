@@ -24,6 +24,10 @@ function App() {
     setProducts(products.filter(product => product.id !== id));
   };
 
+  const handleAddProduct = (newProduct) => {
+    setProducts(prev => [...prev, newProduct]);
+  };
+
   return (
     <div>      
         <Navbar />
@@ -32,7 +36,7 @@ function App() {
 
           <Routes>
             <Route path="/about" element={<AboutPage/>}/>         
-            <Route path="/" element={<DashboardPage products={products} onDelete={handleDelete}/>}/>
+            <Route path="/" element={<DashboardPage products={products} onDelete={handleDelete} onAddProduct={handleAddProduct}/>}/>
             <Route path="/product/:productId" element={<ProductDetailsPage products={products}/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>
           </Routes>          
