@@ -11,6 +11,7 @@ import productsData from './data/products.json';
 import AboutPage from './pages/AboutPage';
 import DashboardPage from './pages/DashboardPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
+import UpdateProductPage from './pages/UpdateProductPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 
@@ -24,6 +25,23 @@ function App() {
     setProducts(products.filter(product => product.id !== id));
   };
 
+  const handleAddProduct = (newProduct) => {
+    setProducts(prev => [...prev, newProduct]);
+  };
+
+  const handleUpdateProduct = (updatedProduct) => {
+    const updatedProducts = [...products];
+
+    for (let i = 0; i < updatedProducts.length; i++) {
+      if (updatedProducts[i].id === updatedProduct.id) {
+        updatedProducts[i] = updatedProduct;
+        break; // stop once found
+      }
+    }
+
+    setProducts(updatedProducts);
+};
+
   return (
     <div>      
         <Navbar />
@@ -32,8 +50,9 @@ function App() {
 
           <Routes>
             <Route path="/about" element={<AboutPage/>}/>         
-            <Route path="/" element={<DashboardPage products={products} onDelete={handleDelete}/>}/>
+            <Route path="/" element={<DashboardPage products={products} onDelete={handleDelete} onAddProduct={handleAddProduct}/>}/>
             <Route path="/product/:productId" element={<ProductDetailsPage products={products}/>}/>
+            <Route path="/edit/:productId" element={<UpdateProductPage products={products} onUpdateProduct={handleUpdateProduct}/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>
           </Routes>          
 
@@ -44,4 +63,3 @@ function App() {
 }
 
 export default App;
-

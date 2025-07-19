@@ -1,99 +1,77 @@
 body {
-  background-color: rgb(216, 204, 228);
+  background-color: rgb(231, 213, 194);
   padding: 0;
   margin: 0;
 }
-
 .nav {
-  background-color: rgb(89, 34, 141);
+  background-color: rgb(79, 30, 125);
   align-items: center;
   justify-content: space-between;
   height: 10vh;
   display: flex;
-
 }
-
 .logo-container {
   display: flex;
   align-items: center;
   gap: 200px;
 }
-
 .logo {
   height: 75px;
 }
-
 .brand-name {
   font-size: 3rem;
   color: rgb(245, 237, 237);
   border-color: grey;
+  margin-left: 280px;
 }
-
-
 footer {
-  background-color: rgb(89, 34, 141);
+  background-color: rgb(79, 30, 125);
   height: 10vh;
-
 }
-
-a {
-  text-decoration: none;
-  padding: 5px;
-  color: bisque;
-}
-
-.active {
-  border: 2px solid black;
-}
-
 .sidebar {
   display: flex;
   gap: 1rem;
   margin: 1rem;
 }
-
 .sidebar button {
   padding: 0.15rem 0.25rem;
   background-color: white;
-  color: blueviolet;
+  color: rgb(79, 30, 125);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.7rem;
 }
-
 .sidebar button:hover {
   background-color: blueviolet;
   color: white;
 }
-
 h1 {
   color: grey;
   text-align: center;
 }
-.product-container {
+.dashboard-forms {
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 50px;
-  gap: 10px;
-  margin-left: 1100px;
+  gap: 40px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 .product-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background-color: rgb(244, 234, 241);
+  background-color: rgb(248, 241, 227);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   color: gray;
 }
-
 .add-btn {
   font-size: 14px;
-  background-color: rgb(181, 35, 181);
+  background-color: rgb(225, 169, 28);
   color:azure;
   border: none;
   border-radius: 5px;

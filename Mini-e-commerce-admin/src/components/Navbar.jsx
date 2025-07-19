@@ -1,6 +1,5 @@
-import logo from "../assets/logo1.png"
+import logo from "../assets/logo2.png"
 import '../App.css'
-import React from "react";
 
 
 function Navbar() {
@@ -9,7 +8,7 @@ function Navbar() {
             <div className="logo-container">
                 <img src={logo} alt="Logo" className="logo" />
 
-                <h1 className="brand-name">ELLE</h1>
+                <h1 className="brand-name">T&N MARKET</h1>
             </div>
         </nav>
     )
