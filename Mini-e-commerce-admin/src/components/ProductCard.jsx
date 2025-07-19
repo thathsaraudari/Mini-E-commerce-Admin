@@ -26,7 +26,7 @@ function ProductCard({ product, onDelete }) {
       </p>
 
       
-      <div stule={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "10p"}} >
+      <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "10p"}} >
         <button onClick={() => onDelete(product.id)} 
                 style={{ 
                   color: "white", 
@@ -48,6 +48,19 @@ function ProductCard({ product, onDelete }) {
               }}
         >
           Details    
+        </Link>
+         <Link
+          to={`/edit/${product.id}`}
+          style={{
+            color: "white",
+            backgroundColor: "#164325ff",
+            padding: "6px 12px",
+            borderRadius: "4px",
+            textDecoration: "none",
+            fontWeight: "bold"
+          }}
+        >
+          Edit
         </Link>
       </div>
     </div>

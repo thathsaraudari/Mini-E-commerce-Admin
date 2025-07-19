@@ -68,6 +68,7 @@ const AddProduct = ({onAddProduct}) => {
         <label><strong>Price:</strong></label>
         <input
           type="number"
+          step="0.01"
           name="price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
@@ -83,6 +84,7 @@ const AddProduct = ({onAddProduct}) => {
         <label><strong>Rating:</strong></label>
         <input
           type="number"
+          step="0.01"
           name="rating"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
@@ -98,6 +100,7 @@ const AddProduct = ({onAddProduct}) => {
         <label><strong>Stock:</strong></label>
         <input
           type="number"
+          step="1"
           name="stock"
           value={stock}
           onChange={(e) => setStock(e.target.value)}
